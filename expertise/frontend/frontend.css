@@ -28,12 +28,34 @@ body {
     color: var(--txt-color);
 }
 
+/* Header styles */
+header {
+    margin: 20px 15px;
+    z-index: 1000;
+}
+
+.footerIconBack a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--txt-color);
+    border-radius: .8rem;
+    transition: .4s;
+}
+
+.footerIconBack a:hover {
+    transform: scale(1.1);
+}
+
+/* Frontend section styles */
 .frontend {
     display: flex;
-    align-items: center; /* vertically center h1 and icon */
-    justify-content: center; /* center horizontally in section */
-    gap: 1rem; /* space between h1 and icon */
-    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10rem 2rem 5rem;
     animation: slideDown 1s ease-out forwards;
     opacity: 0;
     transform: translateY(-50px);
@@ -41,55 +63,69 @@ body {
 
 @keyframes slideDown {
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
+}
+
 .frontend h1 {
     font-size: 6.5rem;
     font-weight: 700;
-    margin: 0; /* remove default margin */
-  }
-  
-.frontend lord-icon {
-    width: 48px;
-    height: 48px;
-  }
+    text-align: center;
+    margin: 0;
+}
 
+.frontend lord-icon {
+    width: 250px;
+    height: 250px;
+}
+
+/* Portfolio section styles */
 .portfolio {
     background: var(--sec-bg-color);
+    padding: 5rem 2rem;
 }
 
 .portfolio h2 {
+    text-align: center;
+    font-size: 5rem;
     margin-bottom: 4rem;
+    color: var(--txt-color);
 }
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    margin: 20px;
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     overflow: hidden;
     display: flex;
+    height: 400px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-box:hover {
+    transform: translateY(-10px);
 }
 
 .portfolio-box img {
-    height: 500px;
+    height: 100%;
     width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     transition: .5s ease;
 }
 
 .portfolio-box:hover img {
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
 .portfolio-box .portfolio-layer {
@@ -98,90 +134,183 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.326), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding: 2rem;
     transform: translateY(100%);
-    transition: .5s;
+    transition: .5s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
     transform: translateY(0%);
-} 
+}
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .portfolio-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .portfolio-layer a {
-    margin-bottom: -18rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--txt-color);
+    background: var(--main-color);
     border-radius: 50%;
+    transition: .3s ease;
+}
+
+.portfolio-layer a:hover {
+    background: var(--txt-color);
+    transform: scale(1.2);
 }
 
 .portfolio-layer a i {
     font-size: 2rem;
-    color: var(--sec-bg-color);
+    color: var(--bg-color);
 }
 
-.footer-iconTap a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: var(--main-color);
-    border-radius: .8rem;
-}
-
+/* Arrow styles */
 #arr-up, #arr-left {
-    font-size: 3.5rem;
-    color: var(--txt-color);
-    transition: .4s;
+    font-size: 3rem;
+    color: var(--bg-color);
+    transition: .4s ease;
 }
 
 #arr-up:hover, #arr-left:hover {
-    background-color: var(--txt-color);
-    border-radius: 4px;
-    font-size: 4rem;
     color: var(--sec-bg-color);
+    transform: scale(1.2);
 }
 
 #arr-up:active, #arr-left:active {
-    scale: .85;
+    transform: scale(.9);
 }
 
+/* Footer styles */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--sec-bg-color);
+    padding: 3rem 5%;
+    background: var(--bg-color);
+    border-top: 2px solid var(--sec-bg-color);
 }
 
 .footer-txt p {
     font-size: 1.6rem;
+    color: var(--txt-color);
 }
 
-.footer-iconTap a {
+.footer-iconTop a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: .8rem;
-    background: var(--main-color);
+    padding: 1rem;
+    background: var(--txt-color);
     border-radius: .8rem;
+    transition: .4s ease;
+}
+
+.footer-iconTop a:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .frontend h1 {
+        font-size: 5rem;
+    }
+    
+    .portfolio h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .portfolio-container .portfolio-box {
+        height: 300px;
+    }
+    
+    .frontend {
+        padding: 8rem 1rem 3rem;
+    }
+    
+    .frontend h1 {
+        font-size: 4rem;
+    }
+    
+    .frontend lord-icon {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .portfolio h2 {
+        font-size: 3.5rem;
+    }
+    
+    .portfolio-layer h4 {
+        font-size: 2rem;
+    }
+    
+    .footer {
+        padding: 2rem 3%;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .frontend h1 {
+        font-size: 3rem;
+    }
+    
+    .frontend lord-icon {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .portfolio h2 {
+        font-size: 2.8rem;
+    }
+    
+    .portfolio-container .portfolio-box {
+        height: 250px;
+    }
+    
+    .portfolio-layer h4 {
+        font-size: 1.8rem;
+    }
+    
+    .portfolio-layer p {
+        font-size: 1.2rem;
+    }
+    
+    .footer-txt p {
+        font-size: 1.2rem;
+    }
 }
