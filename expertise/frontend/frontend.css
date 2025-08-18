@@ -30,7 +30,7 @@ body {
 
 /* Header styles */
 header {
-    margin: 20px 15px;
+    margin: 2rem 2rem;
     z-index: 1000;
 }
 
@@ -48,14 +48,19 @@ header {
     transform: scale(1.1);
 }
 
+section.front-end-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Frontend section styles */
 .frontend {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 10rem 2rem 5rem;
+    flex-direction: row;
     animation: slideDown 1s ease-out forwards;
     opacity: 0;
     transform: translateY(-50px);
@@ -111,6 +116,35 @@ header {
     height: 400px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    /* Initial state for scroll animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideInUp 0.8s ease forwards;
+}
+
+/* Scroll animation keyframes */
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger the animation for each portfolio box */
+.portfolio-container .portfolio-box:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.portfolio-container .portfolio-box:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.portfolio-container .portfolio-box:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.portfolio-container .portfolio-box:nth-child(4) {
+    animation-delay: 0.4s;
 }
 
 .portfolio-box:hover {
@@ -168,13 +202,12 @@ header {
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--main-color);
+    background: var(--txt-color);
     border-radius: 50%;
     transition: .3s ease;
 }
 
 .portfolio-layer a:hover {
-    background: var(--txt-color);
     transform: scale(1.2);
 }
 
@@ -211,7 +244,7 @@ header {
 }
 
 .footer-txt p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--txt-color);
 }
 
