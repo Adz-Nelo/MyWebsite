@@ -217,18 +217,18 @@ section.front-end-container {
 }
 
 /* Arrow styles */
-#arr-up, #arr-left {
+#arr-up {
     font-size: 3rem;
     color: var(--bg-color);
     transition: .4s ease;
 }
 
-#arr-up:hover, #arr-left:hover {
+#arr-up:hover {
     color: var(--sec-bg-color);
     transform: scale(1.2);
 }
 
-#arr-up:active, #arr-left:active {
+#arr-up:active {
     transform: scale(.9);
 }
 
