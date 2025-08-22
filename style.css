@@ -382,6 +382,125 @@ span {
     resize: none;
 }
 
+.tech-stack {
+    background-color: var(--sec-bg-color);
+    align-items: center;
+    text-align: center;
+    min-height: 5vh !important;
+    padding: 2rem !important;
+}
+
+.tech-stack h2 {
+    margin: 2rem 0;
+}
+
+/* Tech Stack Styles */
+.tech-stack {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tech-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Tech Stack Styles */
+.tech-stack {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tech-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    cursor: auto;
+}
+
+.tech-item img {
+    width: 6.5rem;
+}
+
+.tech-item figcaption {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--txt-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s all ease;
+}
+
+/* Hover Effects */
+.tech-item:hover img {
+    width: 8rem;
+}
+
+.tech-item:hover figcaption {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tech-container {
+        gap: 1.5rem;
+    }
+    
+    .tech-item img {
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .tech-item figcaption {
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-container {
+        gap: 1rem;
+    }
+    
+    .tech-item img {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .tech-item figcaption {
+        font-size: 1rem;
+        margin-top: 0.6rem;
+    }
+}
+
 .contact form .btn {
     color: var(--bg-color);
     border-radius: 7px;
@@ -394,7 +513,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--sec-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-txt p {
