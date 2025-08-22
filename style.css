@@ -446,6 +446,7 @@ span {
 
 .tech-item img {
     width: 6.5rem;
+    transition: .35s all ease;
 }
 
 .tech-item figcaption {
@@ -454,18 +455,17 @@ span {
     font-weight: 500;
     color: var(--txt-color);
     opacity: 0;
-    visibility: hidden;
     transition: .35s all ease;
 }
 
 /* Hover Effects */
 .tech-item:hover img {
     width: 8rem;
+    filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.358));
 }
 
 .tech-item:hover figcaption {
     opacity: 1;
-    visibility: visible;
 }
 
 /* Responsive Design */
