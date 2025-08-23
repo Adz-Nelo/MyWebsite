@@ -446,6 +446,7 @@ span {
 
 .tech-item img {
     width: 6.5rem;
+    filter: grayscale(20%);
     transition: .35s all ease;
 }
 
@@ -461,11 +462,34 @@ span {
 /* Hover Effects */
 .tech-item:hover img {
     width: 8rem;
-    filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.358));
+    filter: drop-shadow(1px 1px 7px rgba(255, 255, 255, 0.118));
 }
 
 .tech-item:hover figcaption {
     opacity: 1;
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        position: static !important;
+        display: flex !important;
+        width: auto !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .navbar a {
+        display: inline-block;
+        margin-left: 4rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    #menu-icon {
+        display: none;
+    }
 }
 
 /* Responsive Design */
