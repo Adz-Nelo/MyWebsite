@@ -35,8 +35,26 @@ h1 {
     margin: 0;
 }
 
-section {
+section#base {
     background-color: var(--sec-bg-color);
+}
+
+figure {
+    display: flex;
+}
+
+figure img {
+    width: 700px;
+    margin: 20px;
+    border: 4px solid var(--txt-color);
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.456);
+}
+
+figcaption {
+    text-align: right;
+    margin: 20px;
+    font-size: 22px;
 }
 
 .footer {
