@@ -52,10 +52,16 @@ figure img {
 }
 
 
-figcaption {
-    text-align: right;
-    margin: 20px;
-    font-size: 22px;
+figcaption{
+    text-align: justify;
+    margin: 30px 22px;
+    font-size: 18px;
+}
+
+figcaption h3 {
+    margin: 20px 0;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .footer {

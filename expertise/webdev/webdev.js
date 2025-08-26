@@ -5,6 +5,7 @@ ScrollReveal({
     delay: 250
   });
 
+ScrollReveal().reveal('h3', {origin: 'top'})
 ScrollReveal().reveal('img', {origin: 'left'});
 ScrollReveal().reveal('figcaption', {origin: 'right'});
 ScrollReveal().reveal('h1', {origin: 'bottom'});
