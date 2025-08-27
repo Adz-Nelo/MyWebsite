@@ -46,11 +46,15 @@ section#base {
     background-color: var(--sec-bg-color);
 }
 
+section.discussion {
+    background-color: var(--bg-color);
+}
+
 figure {
     display: flex;
 }
 
-figure img {
+section#base figure img {
     width: 700px;
     margin: 20px;
     border: 4px solid var(--txt-color);
@@ -58,17 +62,42 @@ figure img {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.456);
 }
 
+section.discussion figure img {
+    position: relative;
+    margin: 30px;
+    right: -240px;
+    height: 80vh;
+    width: 600px;
+    border: 4px solid var(--txt-color);
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgba(222, 220, 220, 0.231);
+}
 
-figcaption{
-    text-align: justify;
-    margin: 30px 22px;
+figcaption {
     font-size: 18px;
 }
 
-figcaption h3 {
-    margin: 20px 0;
+section#base figcaption{
+    text-align: justify;
+    margin: 30px 22px;
+}
+
+section.discussion figcaption {
+    text-align: center;
+    margin: 20px 22px;
+}
+
+h3 {
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 600;
+}
+
+section#base figcaption h3 {
+    margin: 20px 0;
+}
+
+section.discussion figcaption h3 {
+    margin: 20px;
 }
 
 .footer {
