@@ -5,6 +5,7 @@
     --sec-bg-color: #323946;
     --txt-color: #fff;
     --main-color: #0ef;
+    --selection: rgba(0, 238, 255, 0.879);
 }
 
 * {
@@ -16,6 +17,12 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+}
+
+*::selection {
+    background-color: var(--selection);
+    color: var(--sec-bg-color);
+    text-shadow: 4px 4px 10px var(--txt-color);
 }
 
 html {
@@ -61,16 +68,6 @@ section.front-end-container {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    animation: slideDown 1s ease-out forwards;
-    opacity: 0;
-    transform: translateY(-50px);
-}
-
-@keyframes slideDown {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .frontend h1 {
@@ -115,19 +112,6 @@ section.front-end-container {
     display: flex;
     height: 400px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    /* Initial state for scroll animation */
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideInUp 0.8s ease forwards;
-}
-
-/* Scroll animation keyframes */
-@keyframes slideInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Stagger the animation for each portfolio box */
