@@ -52,28 +52,32 @@ section.discussion {
 
 figure {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    margin: 30px;
+    width: 50%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
 
 section#base figure img {
-    width: 700px;
-    margin: 20px;
     border: 4px solid var(--txt-color);
     border-radius: 4px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.456);
 }
 
 section.discussion figure img {
-    position: relative;
-    margin: 30px;
-    right: -240px;
-    height: 80vh;
-    width: 600px;
     border: 4px solid var(--txt-color);
     border-radius: 4px;
     box-shadow: 1px 1px 10px rgba(222, 220, 220, 0.231);
+    margin-left: auto;
 }
 
 figcaption {
+    margin: 10px 0 0 0;
     font-size: 18px;
 }
 
@@ -83,8 +87,9 @@ section#base figcaption{
 }
 
 section.discussion figcaption {
-    text-align: center;
-    margin: 20px 22px;
+    max-width: 40%;
+    text-align: justify;
+    margin: -180px 84.38px;
 }
 
 h3 {
@@ -97,7 +102,7 @@ section#base figcaption h3 {
 }
 
 section.discussion figcaption h3 {
-    margin: 20px;
+    margin: 0 0 20px 0;
 }
 
 .footer {
