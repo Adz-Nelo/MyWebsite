@@ -79,6 +79,7 @@ section.discussion figure img {
 figcaption {
     margin: 10px 0 0 0;
     font-size: 18px;
+    line-height: 1.8;
 }
 
 section#base figcaption{
