@@ -89,7 +89,7 @@ section#base figcaption{
 section.discussion figcaption {
     max-width: 40%;
     text-align: justify;
-    margin: -180px 84.38px;
+    margin: 0 0 0 40px;
 }
 
 h3 {
@@ -102,6 +102,7 @@ section#base figcaption h3 {
 }
 
 section.discussion figcaption h3 {
+    text-align: center;
     margin: 0 0 20px 0;
 }
 
