@@ -50,6 +50,10 @@ section.discussion {
     background-color: var(--bg-color);
 }
 
+section.system-review {
+    background-color: var(--sec-bg-color);
+}
+
 figure {
     display: flex;
     align-items: center;
@@ -93,18 +97,25 @@ section.discussion figcaption {
     margin: 0 0 0 40px;
 }
 
-h3 {
+h2 {
     font-size: 26px;
     font-weight: 600;
 }
 
-section#base figcaption h3 {
+section#base figcaption h2 {
     margin: 20px 0;
 }
 
-section.discussion figcaption h3 {
+section.discussion figcaption h2 {
     text-align: center;
     margin: 0 0 20px 0;
+}
+
+section.system-review h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
 }
 
 .footer {
