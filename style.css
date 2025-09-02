@@ -229,6 +229,10 @@ span {
     font-size: 4.5rem;
 }
 
+.about-content {
+    margin: 0 0 0 1.5rem;
+}
+
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
@@ -240,6 +244,7 @@ span {
 
 .about-content p {
     font-size: 1.6rem;
+    text-align: justify;
     margin: 2rem 0 3rem;
 }
 

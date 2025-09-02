@@ -7,4 +7,4 @@ ScrollReveal({
 
 ScrollReveal().reveal('h2', {origin: 'top'})
 ScrollReveal().reveal('lord-icon', {origin: 'right'});
-ScrollReveal().reveal('.portfolio-box', {origin: 'bottom'});
+ScrollReveal().reveal('h1, .portfolio-box', {origin: 'bottom'});
