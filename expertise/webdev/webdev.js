@@ -5,7 +5,7 @@ ScrollReveal({
     delay: 250
   });
 
-ScrollReveal().reveal('h3', {origin: 'top'})
+ScrollReveal().reveal('h3, .img-container', {origin: 'top'})
 ScrollReveal().reveal('#base img, #discussion img', {origin: 'left'});
 ScrollReveal().reveal('figcaption', {origin: 'right'});
 ScrollReveal().reveal('section.discussion figcaption', {origin: 'right'})

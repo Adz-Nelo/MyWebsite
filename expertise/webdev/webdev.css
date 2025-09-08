@@ -82,7 +82,7 @@ section.discussion figure img {
 
 figcaption {
     margin: 10px 0 0 0;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
 }
 
@@ -115,29 +115,40 @@ section.system-review h2 {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    position: relative;
-    right: -30rem;
 }
 
-section.system-review {
+.img-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 100px;
+    gap: 25px; /* Add some spacing between images */
 }
 
-section.system-review figure {
+section.system-review .img-container figure {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* This is crucial - keeps the border fixed */
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    /* Border and shadow stay on the figure - they won't move */
 }
 
-section.system-review figure img {
+section.system-review .img-container figure img {
     width: 100%;
-    height: auto;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    transition: transform 0.3s ease; /* Only transform the image */
+    /* Remove border-radius and box-shadow from img */
+}
+
+section.system-review .img-container figure img:hover {
+    transform: scale(1.1); /* Image zooms inside the fixed border */
+}
+
+section.system-review .img-container figure img:active {
+    transform: scale(1);
 }
 
 .footer {
