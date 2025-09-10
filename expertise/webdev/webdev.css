@@ -68,16 +68,31 @@ img {
 }
 
 section#base figure img {
-    border: 4px solid var(--txt-color);
-    border-radius: 4px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.456);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #0ef;
+}
+
+@keyframes floatImg{
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 section.discussion figure img {
-    border: 4px solid var(--txt-color);
-    border-radius: 4px;
-    box-shadow: 1px 1px 10px rgba(222, 220, 220, 0.231);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #0ef;
     margin-left: auto;
+    animation: floatImg 4s ease-in-out infinite;
 }
 
 figcaption {
@@ -111,7 +126,7 @@ section.discussion figcaption h2 {
     margin: 0 0 20px 0;
 }
 
-section.system-review h2 {
+section.system-review h2, section.final-defense h2 {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
