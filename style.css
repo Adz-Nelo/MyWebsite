@@ -61,7 +61,11 @@ section {
      font-size: 2.5rem;
      color: var(--txt-color);
      font-weight: 600;
-     cursor: default;
+     transition: .15s;
+}
+
+.logo:active {
+    transform: scale(.95);
 }
 
 .navbar {
