@@ -188,7 +188,13 @@ section.final-defense figure img {
     box-shadow: 1px 1px 5px #0ef;
 }
 
+section.final-defense figure figcaption {
+    text-align: justify;
+    margin: 0 1.5rem 0 0;
+}
+
 section.book-bind figure figcaption {
+    text-align: justify;
     margin: 0 4rem;
 }
 
