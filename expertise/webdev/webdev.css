@@ -207,6 +207,10 @@ section.book-bind img {
     width: 30vw;
 }
 
+section.competition {
+    background-color: var(--sec-bg-color);
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
