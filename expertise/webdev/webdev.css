@@ -150,7 +150,7 @@ section.system-review h2, section.final-defense h2 {
     gap: 25px; /* Add some spacing between images */
 }
 
-section.system-review .img-container figure {
+section.system-review .img-container figure, section.infographics .img-container figure {
     margin: 0;
     width: 100%;
     height: 100%;
@@ -160,7 +160,7 @@ section.system-review .img-container figure {
     /* Border and shadow stay on the figure - they won't move */
 }
 
-section.system-review .img-container figure img {
+section.system-review .img-container figure img, section.infographics .img-container figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -169,11 +169,11 @@ section.system-review .img-container figure img {
     /* Remove border-radius and box-shadow from img */
 }
 
-section.system-review .img-container figure img:hover {
+section.system-review .img-container figure img:hover, section.infographics .img-container figure img:hover {
     transform: scale(1.1); /* Image zooms inside the fixed border */
 }
 
-section.system-review .img-container figure img:active {
+section.system-review .img-container figure img:active, section.infographics .img-container figure img:active {
     transform: scale(1);
 }
 
