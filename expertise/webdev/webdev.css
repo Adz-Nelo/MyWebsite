@@ -182,6 +182,21 @@ h3 {
     font-size: 3rem;
 }
 
+section.infographics a {
+    font-size: 2em;
+    color: #fff;
+    transition: .25s;
+}
+
+section.infographics a:hover {
+    color: rgba(222, 78, 222, 0.967);
+    font-size: 2.2em;
+}
+
+section.infographics a:active {
+    font-size: 1.98em;
+}
+
 section.infographics p {
     text-align: center;
     font-size: 2em;
