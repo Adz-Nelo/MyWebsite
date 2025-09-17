@@ -150,6 +150,10 @@ section.system-review h2, section.final-defense h2 {
     gap: 25px; /* Add some spacing between images */
 }
 
+section.system-review {
+    padding: 2em 0;
+}
+
 section.system-review .img-container figure, section.infographics .img-container figure {
     margin: 0;
     width: 100%;
@@ -186,22 +190,22 @@ section.infographics {
     padding: 2em 0;
 }
 
-section.infographics a {
+section.infographics a, section.system-review a {
     font-size: 2em;
     color: #fff;
     transition: .25s;
 }
 
-section.infographics a:hover {
+section.infographics a:hover, section.system-review p a:hover {
     color: rgba(222, 78, 222, 0.967);
     font-size: 2.2em;
 }
 
-section.infographics a:active {
+section.infographics a:active, section.system-review p a:active {
     font-size: 1.98em;
 }
 
-section.infographics p {
+section.infographics p, section.system-review p {
     text-align: center;
     font-size: 2em;
     margin-bottom: 2em;
