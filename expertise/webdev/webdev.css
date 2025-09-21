@@ -72,7 +72,7 @@ img {
     object-fit: cover;
 }
 
-section#base figure img {
+section#base figure img, section.competition figure img {
     border: 2px solid #fff;
     border-radius: 8px;
     box-shadow: 1px 1px 5px #0ef;
@@ -238,6 +238,13 @@ section.book-bind img {
 
 section.competition {
     background-color: var(--sec-bg-color);
+    padding: 4em 0;
+}
+
+section.competition figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
