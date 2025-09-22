@@ -47,7 +47,7 @@ ScrollReveal().reveal('.home-img, .home-content h3, .services-container, .portfo
 ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
 ScrollReveal().reveal('.home-content p, .about-content h3, .home-content h2, .about-content', {origin: 'right'});
 
-//typed js
+// typed js
 const typed = new Typed('.multiple-txt', {
   strings: ['Frontend Developer','Game Developer','Web Developer','Photoshop Editor','Web Designer','Video Editor'],
   typeSpeed: 50,
@@ -56,3 +56,30 @@ const typed = new Typed('.multiple-txt', {
   startDelay: 1500,
   loop: true
 });
+
+// Send Email
+function sendMail(event) {
+  event.preventDefault(); // stop form reload
+
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    number: document.getElementById("number").value,
+    subject: document.getElementById("subject").value,
+    text: document.getElementById("text").value
+  };
+
+  // Send to Admin (you)
+  emailjs.send("service_wj3bf4s", "template_gzgrcct", params)
+    .then(() => {
+      console.log("Admin Email Sent!");
+    })
+    .catch((error) => console.error("Admin Email Failed:", error));
+
+  // Send Auto-Reply to User
+  emailjs.send("service_wj3bf4s", "template_7wfh0jo", params)
+    .then(() => {
+      alert("Your message has been sent and you’ll get an auto-reply soon!");
+    })
+    .catch((error) => console.error("User Auto-Reply Failed:", error));
+}

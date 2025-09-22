@@ -254,23 +254,23 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form onsubmit="sendMail(event)">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input type="text" id="name" placeholder="Full Name" />
+          <input type="email" id="email" placeholder="Email Address" />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject " />
+          <input type="number" id="number" placeholder="Mobile Number" />
+          <input type="text" id="subject" placeholder="Email Subject " />
         </div>
         <textarea
-          name=""
-          id=""
+          name="text"
+          id="text"
           cols="30"
           rows="10"
           placeholder="Your Message"
         ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+        <input type="submit" value="Send Message" onclick="sendMail(event)" class="btn" />
       </form>
     </section>
 
@@ -416,5 +416,15 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "MegHCkMWcbWhjN5Xv",
+          });
+      })();
+    </script>
   </body>
 </html>
