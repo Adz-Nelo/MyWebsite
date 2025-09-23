@@ -260,7 +260,7 @@ section.competition h3 {
 .img-container2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 200px); /* Adjust height as needed */
+    grid-template-rows: repeat(3, 250px);
     gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
@@ -273,10 +273,18 @@ section.competition h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.img-container2 figure a {
+    display: block;
+    width: 100%;
+    height: 120%;
+    transform: translate(-30px, -50px);
+}
+
 .img-container2 figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 10% 50%;
     display: block;
     transition: transform 0.3s ease;
 }
@@ -285,7 +293,11 @@ section.competition h3 {
     transform: scale(1.05);
 }
 
-/* Grid positioning for each figure */
+.img-container2 figure img:active {
+    transform: scale(1);
+}
+
+/* Grid positioning - FIXED */
 .img-container2 figure:nth-child(1) {
     grid-column: 1;
     grid-row: 1 / span 3; /* Spans all 3 rows */
@@ -297,13 +309,14 @@ section.competition h3 {
 }
 
 .img-container2 figure:nth-child(3) {
-    grid-column: 3 / span 3; /* Spans 3 columns */
-    grid-row: 1 / span 3; /* Spans 3 rows - this will be the large image */
+    grid-column: 3; /* Fixed: was 3 / span 3 which goes outside grid */
+    grid-row: 1 / span 3; /* Spans all 3 rows */
 }
 
 .img-container2 figure:nth-child(4) {
     grid-column: 2;
     grid-row: 2;
+    
 }
 
 .img-container2 figure:nth-child(5) {
