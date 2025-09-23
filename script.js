@@ -73,7 +73,7 @@ function sendMail(event) {
     email: document.getElementById("email").value,
     number: document.getElementById("number").value,
     subject: document.getElementById("subject").value,
-    text: document.getElementById("text").value
+    message: document.getElementById("message").value
   };
 
   // Send to Admin (you)
@@ -86,7 +86,7 @@ function sendMail(event) {
   // Send Auto-Reply to User
   emailjs.send("service_wj3bf4s", "template_7wfh0jo", params)
     .then(() => {
-      alert("Your message has been sent and you’ll get an auto-reply soon! 😄");
+      alert("Message has been sent successfully! You’ll get an auto-reply soon! 😄");
     })
     .catch((error) => console.error("User Auto-Reply Failed:", error));
 }
