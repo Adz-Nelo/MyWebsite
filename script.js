@@ -57,6 +57,13 @@ const typed = new Typed('.multiple-txt', {
   loop: true
 });
 
+// Remove letters 
+const numInput = document.getElementById("number");
+
+numInput.addEventListener("input", function () {
+  this.value = this.value.replace(/[^0-9]/g, ""); // remove non-digits
+});
+
 // Send Email
 function sendMail(event) {
   event.preventDefault(); // stop form reload
@@ -72,14 +79,14 @@ function sendMail(event) {
   // Send to Admin (you)
   emailjs.send("service_wj3bf4s", "template_gzgrcct", params)
     .then(() => {
-      console.log("Admin Email Sent!");
+      console.log("Admin Email Sent! 📨");
     })
     .catch((error) => console.error("Admin Email Failed:", error));
 
   // Send Auto-Reply to User
   emailjs.send("service_wj3bf4s", "template_7wfh0jo", params)
     .then(() => {
-      alert("Your message has been sent and you’ll get an auto-reply soon!");
+      alert("Your message has been sent and you’ll get an auto-reply soon! 😄");
     })
     .catch((error) => console.error("User Auto-Reply Failed:", error));
 }

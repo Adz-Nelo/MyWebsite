@@ -551,6 +551,16 @@ span {
     color: var(--bg-color);
     border-radius: 7px;
     margin-top: 1rem;
+    transition: .2s;
+}
+
+.contact form .btn:hover {
+    background-color: #bebfc2;
+    border-color: #bebfc2;
+}
+
+.contact form .btn:active {
+    transform: scale(.9);
 }
 
 .footer {
