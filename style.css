@@ -676,6 +676,12 @@ span {
         margin-top: 4rem;
     }
 
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
     .services h2 {
         margin-bottom: 3rem;
     }
