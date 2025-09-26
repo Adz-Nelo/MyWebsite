@@ -253,15 +253,14 @@
 
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
-
       <form onsubmit="sendMail(event)">
         <div class="input-box">
-          <input type="text" id="name" placeholder="Full Name" />
-          <input type="email" id="email" placeholder="Email Address" />
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email Address" required />
         </div>
         <div class="input-box">
-          <input type="text" id="number" maxlength="11" placeholder="Mobile Number" />
-          <input type="text" id="subject" placeholder="Email Subject " />
+          <input type="tel" id="number" minlength="11" maxlength="11" pattern="[0-9]{11}" placeholder="Mobile Number" required />
+          <input type="text" id="subject" placeholder="Email Subject" required />
         </div>
         <textarea
           name="text"
@@ -269,9 +268,10 @@
           cols="30"
           rows="10"
           placeholder="Your Message"
+          required
         ></textarea>
-        <input type="submit" value="Send Message" onclick="sendMail(event)" class="btn" />
-      </form>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>      
     </section>
 
     <hr />
