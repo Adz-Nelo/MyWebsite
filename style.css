@@ -603,6 +603,29 @@ span {
 }
 
 @media (max-width: 991px) {
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        display: none; /* Add this to hide by default */
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
     .header {
         padding: 2rem 3%;
     }
@@ -611,11 +634,7 @@ span {
         padding: 10rem 3% 2rem;
     }
     
-    .services {
-        padding-bottom: 7rem;
-    }
-
-    .portfolio {
+    .services, .portfolio {
         padding-bottom: 7rem;
     }
 
@@ -625,6 +644,30 @@ span {
 
     .footer {
         padding: 2rem 3%;
+    }
+}
+
+/* Update your desktop navbar rule */
+@media (min-width: 992px) { /* Changed from 769px to 992px */
+    .navbar {
+        position: static !important;
+        display: flex !important;
+        width: auto !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .navbar a {
+        display: inline-block;
+        margin-left: 4rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    #menu-icon {
+        display: none;
     }
 }
 
