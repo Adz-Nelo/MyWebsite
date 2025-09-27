@@ -5,7 +5,7 @@ ScrollReveal({
     delay: 250
   });
 
-ScrollReveal().reveal('h3, .img-container, i', {origin: 'top'})
-ScrollReveal().reveal('figcaption, section.discussion figcaption, .book-bind img', {origin: 'right'});
-ScrollReveal().reveal('#base img, #discussion img, #final-defense img, .competition', {origin: 'left'});
-ScrollReveal().reveal('h1, .system-review h2, .final-defense , section.infographics p', {origin: 'bottom'});
+ScrollReveal().reveal('.section-title', {origin: 'top'})
+ScrollReveal().reveal('.image-wrapper img, .content-text p', {origin: 'right'});
+ScrollReveal().reveal('.content-text h2', {origin: 'left'});
+ScrollReveal().reveal('#header h1, .gallery-item, .achievement-card', {origin: 'bottom'});
