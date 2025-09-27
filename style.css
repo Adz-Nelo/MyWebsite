@@ -648,10 +648,10 @@ span {
 }
 
 @media (max-width: 991px) {
-    /* #menu-icon {
+    #menu-icon {
         display: block;
         cursor: pointer;
-    } */
+    }
 
     .navbar {
         position: absolute;
@@ -717,10 +717,10 @@ span {
 }
 
 @media (max-width: 768px) {
-    /* #menu-icon {
+    #menu-icon {
         display: block;
         cursor: pointer;
-    } */
+    }
 
     .navbar {
         position: absolute;
@@ -801,9 +801,9 @@ span {
 }
 
 @media (max-width: 365px) {
-    /* #menu-icon {
+    #menu-icon {
         display: block;
-    } */
+    }
 
     .home-img img {
         width: 90vw;
