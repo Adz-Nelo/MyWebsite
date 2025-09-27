@@ -606,6 +606,12 @@ span {
         padding: 2rem 3%;
     }
 
+    .social-media, .resume {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     section {
         padding: 10rem 3% 2rem;
     }
