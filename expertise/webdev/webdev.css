@@ -205,6 +205,10 @@ span {
     transform: scale(1.1);
 }
 
+.gallery-item:active img {
+    transform: scale(1);
+}
+
 /* ===== MASONRY LAYOUT ===== */
 .masonry-grid {
     display: grid;
@@ -265,6 +269,10 @@ span {
 
 .masonry-item:hover img {
     transform: scale(1.05);
+}
+
+.masonry-item:active img {
+    transform: scale(1);
 }
 
 /* ===== ACHIEVEMENTS ===== */
