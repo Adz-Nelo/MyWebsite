@@ -70,6 +70,10 @@ h1 {
     z-index: 1;
 }
 
+h2 {
+    text-align: center;
+}
+
 /* ===== SECTION STYLES ===== */
 section {
     padding: 8rem 2rem;
@@ -205,10 +209,6 @@ span {
     transform: scale(1.1);
 }
 
-.gallery-item:active img {
-    transform: scale(1);
-}
-
 /* ===== MASONRY LAYOUT ===== */
 .masonry-grid {
     display: grid;
@@ -271,10 +271,6 @@ span {
     transform: scale(1.05);
 }
 
-.masonry-item:active img {
-    transform: scale(1);
-}
-
 /* ===== ACHIEVEMENTS ===== */
 .achievements-grid {
     display: grid;
@@ -305,6 +301,21 @@ span {
     height: auto;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.achievement-card a {
+    display: block;
+}
+
+.achievement-card a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 238, 255, 0.3);
+}
+
+.achievement-card a:active img {
+    transform: scale(1);
 }
 
 .achievement-card h4 {
@@ -377,7 +388,7 @@ span {
     justify-content: center;
     width: 5rem;
     height: 5rem;
-    background: var(--txt-color);
+    background: var(--main-color);
     border-radius: 1rem;
     transition: var(--transition);
 }
@@ -387,12 +398,8 @@ span {
     transform: translateY(-3px);
 }
 
-.footer-iconTop a:active {
-    transform: scale(.9);
-}
-
 #arr-up {
-    font-size: 3rem;
+    font-size: 2.4rem;
     color: var(--bg-color);
 }
 
