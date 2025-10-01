@@ -86,6 +86,10 @@ section {
     position: relative;
 }
 
+.navbar a:active {
+    font-size: 1.6rem;
+}
+
 .navbar a::after {
     content: '';
     position: absolute;
