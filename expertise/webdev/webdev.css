@@ -209,6 +209,10 @@ span {
     transform: scale(1.1);
 }
 
+.gallery-item:active img {
+    transform: scale(1);
+}
+
 /* ===== MASONRY LAYOUT ===== */
 .masonry-grid {
     display: grid;
@@ -271,6 +275,10 @@ span {
     transform: scale(1.05);
 }
 
+.masonry-grid:active img {
+    transform: scale(1);
+}
+
 /* ===== ACHIEVEMENTS ===== */
 .achievements-grid {
     display: grid;
@@ -321,7 +329,6 @@ span {
 .achievement-card h4 {
     font-size: 2rem;
     margin: 1rem 0;
-    color: var(--main-color);
 }
 
 .achievement-card p {
