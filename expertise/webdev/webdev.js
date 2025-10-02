@@ -6,6 +6,6 @@ ScrollReveal({
   });
 
 ScrollReveal().reveal('.section-title', {origin: 'top'})
-ScrollReveal().reveal('.image-wrapper img, .content-text p', {origin: 'right'});
+ScrollReveal().reveal('.image-wrapper, .content-text p', {origin: 'right'});
 ScrollReveal().reveal('.content-text h2', {origin: 'left'});
 ScrollReveal().reveal('#header h1, .gallery-item, .achievement-card', {origin: 'bottom'});

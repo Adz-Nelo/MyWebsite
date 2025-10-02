@@ -395,7 +395,7 @@ span {
     justify-content: center;
     width: 5rem;
     height: 5rem;
-    background: var(--main-color);
+    background: var(--txt-color);
     border-radius: 1rem;
     transition: var(--transition);
 }
@@ -403,6 +403,10 @@ span {
 .footer-iconTop a:hover {
     background: var(--txt-color);
     transform: translateY(-3px);
+}
+
+.footer-iconTop a:active {
+    transform: scale(1);
 }
 
 #arr-up {
