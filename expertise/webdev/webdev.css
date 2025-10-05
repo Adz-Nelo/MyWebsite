@@ -275,29 +275,29 @@ span {
 }
 
 /* Fixed grid positioning for 5 items */
-.masonry-item:nth-child(1) { 
+.masonry-item:nth-child(1) {
     grid-column: 1;
-    grid-row: 1 / span 3; 
+    grid-row: 1 / span 3;
 }
 
-.masonry-item:nth-child(2) { 
+.masonry-item:nth-child(2) {
     grid-column: 2;
-    grid-row: 1; 
+    grid-row: 1;
 }
 
-.masonry-item:nth-child(3) { 
+.masonry-item:nth-child(3) {
     grid-column: 3;
-    grid-row: 1 / span 3; 
+    grid-row: 1 / span 3;
 }
 
-.masonry-item:nth-child(4) { 
+.masonry-item:nth-child(4) {
     grid-column: 2;
-    grid-row: 2; 
+    grid-row: 2;
 }
 
-.masonry-item:nth-child(5) { 
+.masonry-item:nth-child(5) {
     grid-column: 2;
-    grid-row: 3; 
+    grid-row: 3;
 }
 
 .masonry-item:hover {
@@ -366,7 +366,6 @@ span {
 .achievement-card h4 {
     font-size: 2rem;
     margin: 1rem 0;
-    color: var(--main-color);
 }
 
 .achievement-card p {
@@ -380,7 +379,7 @@ span {
     align-items: center;
     justify-content: center;
     font-size: 2.4rem;
-    color: var(--main-color);
+    color: var(--txt-color);
     padding: 1rem;
     border-radius: 50%;
     background: rgba(0, 238, 255, 0.1);
@@ -392,6 +391,10 @@ span {
     background: var(--main-color);
     color: var(--bg-color);
     transform: translateY(-3px) scale(1.1);
+}
+
+.external-link:active {
+    transform: scale(.95);
 }
 
 .link-container {
@@ -513,14 +516,9 @@ span {
         direction: ltr;
     }
 
-    .gallery-grid {
+    .gallery-grid, .masonry-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .masonry-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .masonry-item {

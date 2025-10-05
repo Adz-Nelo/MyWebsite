@@ -5,7 +5,7 @@ ScrollReveal({
     delay: 250
   });
 
-ScrollReveal().reveal('.section-title', {origin: 'top'})
+ScrollReveal().reveal('.section-title, .link-description', {origin: 'top'})
 ScrollReveal().reveal('.image-wrapper, .content-text p', {origin: 'right'});
 ScrollReveal().reveal('.content-text h2', {origin: 'left'});
-ScrollReveal().reveal('#header h1, .gallery-item, .achievement-card, .masonry-item, .bookbind a', {origin: 'bottom'});
+ScrollReveal().reveal('#header h1, .gallery-item, .achievement-card, .masonry-item, .bookbind a, .link-container', {origin: 'bottom'});
