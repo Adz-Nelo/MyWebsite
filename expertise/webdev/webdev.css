@@ -458,6 +458,40 @@ span {
     background-color: var(--sec-bg-color);
 }
 
+.group .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+.group .image-grid figure {
+    width: 100%;
+    aspect-ratio: 10 / 8; /* makes all squares — you can adjust to 4/3 or 3/2 if you prefer */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.group .image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures images fill evenly without distortion */
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.group figure:hover {
+    box-shadow: 0 15px 40px rgba(0, 238, 255, 0.15);
+}
+
+.group .image-grid img:hover {
+    transform: scale(1.05);
+}
+
+.group .image-grid img:active {
+    transform: scale(1);    
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: var(--bg-color);
