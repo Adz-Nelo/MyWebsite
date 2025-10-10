@@ -541,17 +541,14 @@ span {
         padding: 6rem 1rem;
     }
 
-    .content-figure {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
     .content-figure.reverse {
         direction: ltr;
     }
 
-    .gallery-grid, .masonry-grid {
+    .content-figure, .gallery-grid, .masonry-grid, 
+    .achievements-grid, .group .image-grid {
         grid-template-columns: 1fr;
+        margin: 0 10px;
         gap: 2rem;
     }
 
@@ -563,11 +560,6 @@ span {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         padding: 6rem 1rem;
-    }
-
-    .achievements-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
     }
 
     .footer-content {
