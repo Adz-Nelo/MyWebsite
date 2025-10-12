@@ -8,4 +8,4 @@ ScrollReveal({
 ScrollReveal().reveal('.section-title, .link-description', {origin: 'top'})
 ScrollReveal().reveal('.image-wrapper, .content-text p', {origin: 'right'});
 ScrollReveal().reveal('.content-text h2', {origin: 'left'});
-ScrollReveal().reveal('#header h1, .gallery-item, .achievement-card a img, .masonry-item, .bookbind figure, .link-container, .image-grid', {origin: 'bottom'});
+ScrollReveal().reveal('#header h1, .gallery-item, .achievement-card a img, .masonry-item, .bookbind figure, .link-container, .image-grid, .group-members-box img', {origin: 'bottom'});
