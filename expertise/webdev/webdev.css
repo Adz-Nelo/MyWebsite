@@ -209,7 +209,7 @@ span {
 .bookbind {
     background: var(--sec-bg-color);
     padding: 8rem 2rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -251,7 +251,7 @@ span {
 }
 
 .bookbind figure {
-    aspect-ratio: 4/3;
+    aspect-ratio: 2 / 3;
 }
 
 /* ===== MASONRY LAYOUT ===== */
@@ -325,13 +325,18 @@ span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 3rem;
-    margin: 4rem 0;
+    margin: 4rem auto;
+    justify-content: center;
+    justify-items: center;
+    max-width: 1400px;
+    padding: 0 2rem;
 }
 
 .achievement-card {
     background: var(--sec-bg-color);
     border-radius: 1.5rem;
     padding: 2rem;
+    width: 85%;
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -430,6 +435,7 @@ span {
     border-radius: 1rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    margin: 0 2rem;
     aspect-ratio: 4/3;
 }
 
@@ -466,7 +472,8 @@ span {
   
 .group .image-grid figure {
     width: 100%;
-    aspect-ratio: 10 / 8; /* makes all squares — you can adjust to 4/3 or 3/2 if you prefer */
+    aspect-ratio: 12 / 8; /* makes all squares — you can adjust to 4/3 or 3/2 if you prefer */
+    gap: 5rem;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -500,8 +507,8 @@ span {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 2.5rem;
     justify-items: center;
+    gap: 2.5rem;
 }
 
 .group-members-container .group-members-box {
