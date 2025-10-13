@@ -473,7 +473,6 @@ span {
 .group .image-grid figure {
     width: 100%;
     aspect-ratio: 12 / 8; /* makes all squares — you can adjust to 4/3 or 3/2 if you prefer */
-    gap: 5rem;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -518,7 +517,7 @@ span {
     overflow: hidden;
     display: flex;
     max-width: 500px; /* Limit maximum width */
-    width: 100%; /* Make it responsive */
+    width: 70%; /* Make it responsive */
 }
 
 .group-members-box img {
@@ -560,7 +559,7 @@ span {
 
 .group-members-layer p {
     text-align: justify;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: .3rem 0 1rem;
 }
 
@@ -616,7 +615,7 @@ span {
     justify-content: center;
     width: 5rem;
     height: 5rem;
-    background: var(--main-color);
+    background: var(--txt-color);
     border-radius: 1rem;
     transition: var(--transition);
 }
