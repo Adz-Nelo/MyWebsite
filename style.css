@@ -54,6 +54,7 @@ section {
     align-items: center;
     z-index: 100;
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(175, 178, 178, 0.042);
 }
 
 .header.sticky {
