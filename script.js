@@ -57,6 +57,33 @@ const typed = new Typed('.multiple-txt', {
   loop: true
 });
 
+// Dark Mode Toggle - FIXED
+let btn = document.getElementById("btn");
+let btnIcon = document.getElementById("btnIcon");
+
+btn.onclick = function() {
+    document.body.classList.toggle("dark-theme");
+    
+    // CORRECTED: Sun shows in light mode, Moon shows in dark mode
+    if (document.body.classList.contains("dark-theme")) {
+        btnIcon.src = "img/moon.svg"; // Sun icon for dark mode (to switch to light)
+    } else {
+        btnIcon.src = "img/sun.svg"; // Moon icon for light mode (to switch to dark)
+    }
+    
+    // Save preference
+    localStorage.setItem('theme', document.body.classList.contains("dark-theme") ? 'dark' : 'light');
+}
+
+// Set initial theme
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    btnIcon.src = "img/moon.svg";
+} else {
+    document.body.classList.remove('dark-theme');
+    btnIcon.src = "img/sun.svg";
+}
+
 // Remove letters 
 const numInput = document.getElementById("number");
 

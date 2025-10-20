@@ -1,11 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* ===== IMPROVED LIGHT THEME ===== */
 :root {
-    --bg-color: #1f242d;
-    --sec-bg-color: #323946;
-    --txt-color: #fff;
+    --bg-color: #ffffff;
+    --sec-bg-color: #cbcfd162;
+    --txt-color: #2d3748;
+    --main-color: #2d3748;
+    --selection: #fff;
+    --header: #2e3034;
+    --header-txt: #fff;
+    --header-hover: #fff;
+    --linear-effect: #ff9a00;
+    --linear-effect2: #ffd700;
+    --linear-effect3: #ff9a00;
+    --linear-hover: #ff8c00;
+    --linear-hover2: #ffcc00;
+    --linear-hover3: #ff8c00;
+    --shadow: rgba(255, 154, 0, 0.4);
+    --shadow2: rgba(255, 255, 255, 0.3);
+    --shadow3: rgba(255, 215, 0, 0.5);
+    --shadow-hover: rgba(255, 140, 0, 0.5); 
+    --shadow2-hover: rgba(255, 255, 255, 0.4);
+    --shadow3-hover: rgba(255, 204, 0, 0.7);
+}
+
+/* ===== SOFTER DARK THEME ===== */
+.dark-theme {
+    --bg-color: #1a202c;
+    --sec-bg-color: #2d3748;
+    --txt-color: #cbd5e0;
     --main-color: #0ef;
-    --selection: rgba(0, 238, 255, 0.879);
+    --selection: #0ef;
+    --header: #1a202c;
+    --header-txt: #fff;
+    --header-hover: #0ef;
+    --linear-effect: #1e3c72; 
+    --linear-effect2: #283593; 
+    --linear-effect3: #1a237e;
+    --linear-hover: #1e3c72;  
+    --linear-hover2: #2a5298; 
+    --linear-hover3: #1e3c72;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --shadow2: rgba(255, 255, 255, 0.2);
+    --shadow3: rgba(92, 107, 192, 0.4);
+    --shadow-hover: rgba(0, 0, 0, 0.4);
+    --shadow-hover2: rgba(255, 255, 255, 0.2);
+    --shadow-hover3: rgba(74, 144, 226, 0.5);
 }
 
 * {
@@ -20,8 +60,8 @@
 }
 
 *::selection {
-    background-color: var(--selection);
-    color: var(--sec-bg-color);
+    background-color: var(--main-color);
+    color: var(--selection);
     text-shadow: 4px 4px 10px var(--txt-color);
 }
 
@@ -33,7 +73,8 @@ html {
 body {
     min-height: 100vh;
     background: var(--bg-color);
-    color: var(--txt-color);
+    color: var(--txt-color); 
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 section {
@@ -48,13 +89,14 @@ section {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--header);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(175, 178, 178, 0.042);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
 }
 
 .header.sticky {
@@ -64,7 +106,7 @@ section {
 
 .logo {
     font-size: 2.5rem;
-    color: var(--txt-color);
+    color: var(--header-txt);
     font-weight: 600;
     transition: transform 0.15s ease;
 }
@@ -81,7 +123,7 @@ section {
 
 .navbar a {
     font-size: 1.7rem;
-    color: var(--txt-color);
+    color: var(--header-txt);
     margin-left: 4rem;
     transition: all 0.3s ease;
     position: relative;
@@ -98,7 +140,7 @@ section {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--main-color);
+    background: var(--header-hover);
     transition: width 0.3s ease;
 }
 
@@ -109,7 +151,116 @@ section {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
+    color: var(--header-hover);
+}
+
+/* ===== SIMPLE DARK MODE TOGGLE ===== */
+.toggle-btn {
+    background: linear-gradient(135deg, var(--linear-effect) 0%, var(--linear-effect2) 50%, var(--linear-effect3) 100%);
+    width: 55px;
+    height: 28px;
+    border-radius: 50px;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 4.5rem;
+    border: 1.5px solid #fff;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 2px 10px var(--shadow),
+        inset 0 1px 4px var(--shadow2),
+        0 0 15px var(--shadow3);
+    overflow: hidden;
+}
+
+/* Twinkling stars background */
+.toggle-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 15px 15px;
+    border-radius: 50px;
+    opacity: 0.4;
+    animation: twinkle 3s infinite alternate;
+    pointer-events: none;
+}
+
+/* Twinkling animation */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.02);
+    }
+}
+
+/* Individual star animations */
+.toggle-btn::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: starTwinkle 2s infinite ease-in-out;
+    box-shadow: 
+        15px 5px 0 white,
+        -10px 15px 0 white,
+        25px -8px 0 white;
+}
+
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.toggle-btn:hover {
+    background: linear-gradient(135deg, var(--linear-hover) 0%, var(--linear-hover2) 50%, var(--linear-hover3) 100%);
+    box-shadow: 
+        0 4px 12px var(--shadow-hover),
+        inset 0 1px 4px var(--shadow-hover2),
+        0 0 15px var(--shadow-hover3);
+    transform: scale(1.05);
+}
+
+.toggle-btn:hover::before {
+    animation-duration: 1.5s;
+    opacity: 0.6;
+}
+
+.toggle-btn img {
+    width: 18px;
+    height: 18px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    left: 5px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
+
+/* Slide to right in dark mode */
+.dark-theme .toggle-btn img {
+    left: calc(100% - 23px);
+}
+
+/* Slide to right in dark mode */
+.dark-theme .toggle-btn img {
+    left: calc(100% - 23px);
 }
 
 /* Menu Icon - Initially Hidden */
@@ -142,7 +293,7 @@ section {
     width: 30vw;
     border: 2px solid #fff;
     border-radius: 8px;
-    box-shadow: 1px 1px 5px #0ef;
+    box-shadow: 1px 1px 5px var(--main-color);
     animation: floatImg 4s ease-in-out infinite;
 }
 
@@ -205,11 +356,13 @@ span {
 .social-media #fb:hover {
     background: #316FF6;
     border-color: #316FF6;
+    color: #fff;
 }
 
 .social-media #ig:hover {
     background: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    border-color: #4f5bd5;
+    border-color: #962fbf;
+    color: #fff;
 }
 
 .social-media #gh:hover, 
@@ -367,6 +520,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
+    color: #fff;
     background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
     display: flex;
     justify-content: center;
@@ -555,7 +709,7 @@ span {
     background-color: var(--txt-color);
     border-radius: 4px;
     font-size: 4rem;
-    color: var(--sec-bg-color);
+    color: #fff;
     transform: translateY(-3px);
 }
 
