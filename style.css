@@ -7,7 +7,7 @@
     --txt-color: #2d3748;
     --main-color: #2d3748;
     --selection: #fff;
-    --header: #2e3034;
+    --header: #3c5689;
     --header-txt: #fff;
     --header-hover: #fff;
     --linear-effect: #ff9a00;
@@ -22,6 +22,7 @@
     --shadow-hover: rgba(255, 140, 0, 0.5); 
     --shadow2-hover: rgba(255, 255, 255, 0.4);
     --shadow3-hover: rgba(255, 204, 0, 0.7);
+    --bg-resume: rgb(255, 166, 0);
 }
 
 /* ===== SOFTER DARK THEME ===== */
@@ -46,6 +47,7 @@
     --shadow-hover: rgba(0, 0, 0, 0.4);
     --shadow-hover2: rgba(255, 255, 255, 0.2);
     --shadow-hover3: rgba(74, 144, 226, 0.5);
+    --bg-resume: none;
 }
 
 * {
@@ -268,14 +270,14 @@ section {
 /* Menu Icon - Initially Hidden */
 #menu-icon {
     font-size: 3.6rem;
-    color: var(--txt-color);
+    color: #fff;
     cursor: pointer;
     display: none;
     transition: all 0.3s ease;
 }
 
 #menu-icon:hover {
-    color: var(--main-color);
+    color: #fff;
     transform: scale(1.1);
 }
 
@@ -415,7 +417,7 @@ span {
     width: 30vw;
     border: 2px solid #fff;
     border-radius: 8px;
-    box-shadow: 1px 1px 5px #0ef;
+    box-shadow: 1px 1px 5px var(--main-color);
 }
 
 .heading {
@@ -733,7 +735,7 @@ span {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background: var(--bg-color);
+        background: var(--header);
         border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
         display: none;
@@ -765,6 +767,12 @@ span {
 
     .header {
         padding: 2rem 3%;
+    }
+
+    .toggle-btn {
+        margin: 12px 0 0 8px;
+        width: 15%;
+        height: 5vh;
     }
 
     .social-media, .resume {
