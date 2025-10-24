@@ -5,9 +5,11 @@
     --bg-color: #ffffff;
     --sec-bg-color: #cbcfd162;
     --txt-color: #2d3748;
-    --main-color: #2d3748;
+    --txt-shadow: #2d3748;
+    --main-color: #ff9a00;
+    --img-shadow: #2d3748;
     --selection: #fff;
-    --header: #3c5689;
+    --header: #2489bb;
     --header-txt: #fff;
     --header-hover: #fff;
     --linear-effect: #ff9a00;
@@ -23,6 +25,11 @@
     --shadow2-hover: rgba(255, 255, 255, 0.4);
     --shadow3-hover: rgba(255, 204, 0, 0.7);
     --bg-resume: rgb(255, 166, 0);
+    --bg-fb: #316FF6;
+    --bg-ig: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    --bg-gh: #2d3748;
+    --bg-resume: rgb(248, 186, 28);
+    --border: none;
 }
 
 /* ===== SOFTER DARK THEME ===== */
@@ -30,7 +37,9 @@
     --bg-color: #1a202c;
     --sec-bg-color: #2d3748;
     --txt-color: #cbd5e0;
+    --txt-shadow: #cbd5e0;
     --main-color: #0ef;
+    --img-shadow: #fff;
     --selection: #0ef;
     --header: #1a202c;
     --header-txt: #fff;
@@ -48,6 +57,11 @@
     --shadow-hover2: rgba(255, 255, 255, 0.2);
     --shadow-hover3: rgba(74, 144, 226, 0.5);
     --bg-resume: none;
+    --bg-fb: none;
+    --bg-ig: none;
+    --bg-gh: none;
+    --bg-resume: none;
+    --border: #1e1e1e;
 }
 
 * {
@@ -297,7 +311,7 @@ section {
     width: 30vw;
     border: 2px solid #fff;
     border-radius: 8px;
-    box-shadow: 1px 1px 5px var(--main-color);
+    box-shadow: 1px 1px 5px var(--img-shadow);
     animation: floatImg 4s ease-in-out infinite;
 }
 
@@ -308,6 +322,14 @@ section {
     50% {
         transform: translateY(-2.4rem);
     }
+}
+
+.home-content h1:first-child {
+    text-align: center; 
+    font-size: 6em; 
+    color: var(--main-color);
+    -webkit-text-stroke: 1px #1a202c;
+    text-shadow: 1px 1px 2px var(--txt-color);
 }
 
 .home-content h2 {
@@ -325,7 +347,7 @@ section {
 
 span {
     color: var(--main-color);
-    -webkit-text-stroke: 1px var(--bg-color);
+    -webkit-text-stroke: 1px #1a202c;
     text-shadow: 1px 1px 1px var(--txt-color);
 }
 
@@ -352,9 +374,21 @@ span {
     border: .2rem solid var(--txt-color);
     border-radius: 50%;
     font-size: 2rem;
-    color: var(--txt-color);
+    color: #fff;
     margin: 3rem 1.5rem 3rem 0;
     transition: all 0.25s ease;
+}
+
+.social-media #fb {
+    background-color: var(--bg-fb);
+}
+
+.social-media #ig {
+    background: var(--bg-ig);
+}
+
+.social-media #gh, .social-media #tk {
+    background-color: var(--bg-gh);
 }
 
 .social-media #fb:hover {
@@ -780,7 +814,7 @@ span {
         justify-content: center;
         align-items: center;
     }
-
+    
     section {
         padding: 10rem 3% 2rem;
     }
