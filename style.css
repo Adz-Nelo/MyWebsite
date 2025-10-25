@@ -3,8 +3,8 @@
 /* ===== IMPROVED LIGHT THEME ===== */
 :root {
     --bg-color: #ffffff;
-    --sec-bg-color: #cbcfd162;
-    --txt-color: #2d3748;
+    --sec-bg-color: #cbcfd165;
+    --txt-color: #24272ed6;
     --txt-shadow: #2d3748;
     --main-color: #ff9a00;
     --img-shadow: #2d3748;
@@ -30,6 +30,8 @@
     --bg-gh: #2d3748;
     --bg-resume: rgb(248, 186, 28);
     --border: none;
+    --outline: #272e3a;
+    --box-shadow: #2d374856;
 }
 
 /* ===== SOFTER DARK THEME ===== */
@@ -61,7 +63,9 @@
     --bg-ig: none;
     --bg-gh: none;
     --bg-resume: none;
-    --border: #1e1e1e;
+    --border: ##fff;
+    --outline: none;
+    --box-shadow: rgba(0, 238, 255, 0.2);
 }
 
 * {
@@ -451,7 +455,7 @@ span {
     width: 30vw;
     border: 2px solid #fff;
     border-radius: 8px;
-    box-shadow: 1px 1px 5px var(--main-color);
+    box-shadow: 1px 1px 5px var(--img-shadow);
 }
 
 .heading {
@@ -502,7 +506,7 @@ span {
 .services-container .services-box:hover {
     border-color: var(--txt-color);
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 238, 255, 0.2);
+    box-shadow: 0 10px 20px var(--box-shadow);
 }
 
 .services-box i {
@@ -951,4 +955,11 @@ span {
     section {
         padding: 8rem 5% 2rem;
     }
+}
+
+.resume .btn {
+    background-color: var(--bg-resume);
+    color: #fff;
+    border-color: var(--border);
+    text-shadow: 1px 1px 1px var(--outline);
 }
