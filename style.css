@@ -29,6 +29,9 @@
     --bg-ig: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     --bg-gh: #2d3748;
     --bg-resume: rgb(248, 186, 28);
+    --web-dev-icon: #e34f26;
+    --photoshop-icon: #0099ff;
+    --game-dev-icon: #8a2be2;
     --border: none;
     --outline: #272e3a;
     --box-shadow: #2d374856;
@@ -59,11 +62,14 @@
     --shadow-hover2: rgba(255, 255, 255, 0.2);
     --shadow-hover3: rgba(74, 144, 226, 0.5);
     --bg-resume: none;
+    --web-dev-icon: #cbd5e0;
+    --photoshop-icon: #cbd5e0;
+    --game-dev-icon: #cbd5e0;
     --bg-fb: none;
     --bg-ig: none;
     --bg-gh: none;
     --bg-resume: none;
-    --border: ##fff;
+    --border: #fff;
     --outline: none;
     --box-shadow: rgba(0, 238, 255, 0.2);
 }
@@ -422,12 +428,14 @@ span {
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    border: 2px solid var(--txt-color);
+    border: 2px solid var(--border);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: var(--txt-color);
+    background-color: var(--bg-resume);
+    color: #fff;
     letter-spacing: .1rem;
     font-weight: 600;
+    text-shadow: 1px 1px 1px var(--outline);
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -501,6 +509,18 @@ span {
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: all 0.4s ease;
+}
+
+.services-container .services-box:nth-child(1) i {
+    color: var(--web-dev-icon);
+}
+
+.services-container .services-box:nth-child(2) i {
+    color: var(--photoshop-icon);
+}
+
+.services-container .services-box:nth-child(3) i {
+    color: var(--game-dev-icon);
 }
 
 .services-container .services-box:hover {
