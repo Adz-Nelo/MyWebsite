@@ -669,7 +669,8 @@ span {
     .content-figure, .gallery-grid, .masonry-grid, 
     .achievements-grid, .group .image-grid {
         grid-template-columns: 1fr;
-        margin: 0 50px;
+        margin: 0 10px;
+        width: 95%;
         gap: 2rem;
     }
 
