@@ -282,7 +282,7 @@ section {
 /* Slide to right in dark mode with rotation */
 .dark-theme .toggle-btn img {
     left: calc(100% - 23px);
-    transform: rotate(220deg);
+    transform: rotate(235deg);
 }
 
 /* Add transition for smooth rotation */
@@ -509,6 +509,10 @@ span {
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: all 0.4s ease;
+}
+
+.services-container .services-box i {
+    text-shadow: 2px 2px 2px var(--outline);
 }
 
 .services-container .services-box:nth-child(1) i {
