@@ -10,7 +10,6 @@
     --img-shadow: #2d3748;
     --selection: #fff;
     --header: #2489bb;
-    --header-txt: #fff;
     --header-hover: #fff;
     --linear-effect: #ff9a00;
     --linear-effect2: #ffd700;
@@ -32,6 +31,9 @@
     --web-dev-icon: #e34f26;
     --photoshop-icon: #0099ff;
     --game-dev-icon: #8a2be2;
+    --web-dev-icon-hover: #e34f26;
+    --photoshop-icon-hover: #0099ff;
+    --btn-hover: none;
     --border: none;
     --outline: #272e3a;
     --box-shadow: #2d374856;
@@ -47,7 +49,6 @@
     --img-shadow: #fff;
     --selection: #0ef;
     --header: #1a202c;
-    --header-txt: #fff;
     --header-hover: #0ef;
     --linear-effect: #1e3c72; 
     --linear-effect2: #283593; 
@@ -62,9 +63,10 @@
     --shadow-hover2: rgba(255, 255, 255, 0.2);
     --shadow-hover3: rgba(74, 144, 226, 0.5);
     --bg-resume: none;
-    --web-dev-icon: #cbd5e0;
-    --photoshop-icon: #cbd5e0;
-    --game-dev-icon: #cbd5e0;
+    --web-dev-icon: none;
+    --photoshop-icon: none;
+    --game-dev-icon: none;
+    --btn-hover: #fff;
     --bg-fb: none;
     --bg-ig: none;
     --bg-gh: none;
@@ -132,7 +134,7 @@ section {
 
 .logo {
     font-size: 2.5rem;
-    color: var(--header-txt);
+    color: #fff;
     font-weight: 600;
     transition: transform 0.15s ease;
 }
@@ -149,7 +151,7 @@ section {
 
 .navbar a {
     font-size: 1.7rem;
-    color: var(--header-txt);
+    color: #fff;
     margin-left: 4rem;
     transition: all 0.3s ease;
     position: relative;
@@ -519,12 +521,28 @@ span {
     color: var(--web-dev-icon);
 }
 
+.services-container .services-box a:hover {
+    color: #fff;
+}
+
+.services-container .services-box:nth-child(1) a {
+    background-color: var(--web-dev-icon);
+}
+
 .services-container .services-box:nth-child(2) i {
     color: var(--photoshop-icon);
 }
 
+.services-container .services-box:nth-child(2) a {
+    background-color: var(--photoshop-icon);
+}
+
 .services-container .services-box:nth-child(3) i {
     color: var(--game-dev-icon);
+}
+
+.services-container .services-box:nth-child(3) a {
+    background-color: var(--game-dev-icon);
 }
 
 .services-container .services-box:hover {
