@@ -114,27 +114,6 @@ section.front-end-container {
     cursor: pointer;
 }
 
-/* Stagger the animation for each portfolio box */
-.portfolio-container .portfolio-box:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.portfolio-container .portfolio-box:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.portfolio-container .portfolio-box:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.portfolio-container .portfolio-box:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.portfolio-box:hover {
-    transform: translateY(-10px);
-}
-
 .portfolio-box img {
     height: 100%;
     width: 100%;
@@ -195,6 +174,10 @@ section.front-end-container {
     transform: scale(1.2);
 }
 
+.portfolio-layer a:active {
+    transform: scale(1);
+}
+
 .portfolio-layer a i {
     font-size: 2rem;
     color: var(--bg-color);
@@ -228,7 +211,7 @@ section.front-end-container {
 }
 
 .footer-txt p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--txt-color);
 }
 
