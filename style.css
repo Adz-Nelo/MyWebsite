@@ -590,7 +590,10 @@ span {
 }
 
 .portfolio-box img {
+    height: auto;
     width: 100%;
+    aspect-ratio: 4 / 4;
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
