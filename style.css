@@ -5,6 +5,7 @@
     --bg-color: #ffffff;
     --sec-bg-color: #cbcfd165;
     --txt-color: #24272ed6;
+    --txt-color-hover: #fff;
     --txt-shadow: #2d3748;
     --main-color: #ff9a00;
     --img-shadow: #2d3748;
@@ -24,10 +25,10 @@
     --shadow2-hover: rgba(255, 255, 255, 0.4);
     --shadow3-hover: rgba(255, 204, 0, 0.7);
     --bg-resume: rgb(255, 166, 0);
+    --bg-resume-hover: rgb(255, 166, 0);
     --bg-fb: #316FF6;
     --bg-ig: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     --bg-gh: #2d3748;
-    --bg-resume: rgb(248, 186, 28);
     --web-dev-icon: #e34f26;
     --photoshop-icon: #0099ff;
     --game-dev-icon: #8a2be2;
@@ -37,13 +38,15 @@
     --border: none;
     --outline: #272e3a;
     --box-shadow: #2d374856;
+    --footer-hover: #fff;
 }
 
 /* ===== SOFTER DARK THEME ===== */
 .dark-theme {
     --bg-color: #1a202c;
     --sec-bg-color: #2d3748;
-    --txt-color: #cbd5e0;
+    --txt-color: #fff;
+    --txt-color-hover: #1a202c;
     --txt-shadow: #cbd5e0;
     --main-color: #0ef;
     --img-shadow: #fff;
@@ -63,6 +66,7 @@
     --shadow-hover2: rgba(255, 255, 255, 0.2);
     --shadow-hover3: rgba(74, 144, 226, 0.5);
     --bg-resume: none;
+    --bg-resume-hover: #fff;
     --web-dev-icon: none;
     --photoshop-icon: none;
     --game-dev-icon: none;
@@ -70,10 +74,10 @@
     --bg-fb: none;
     --bg-ig: none;
     --bg-gh: none;
-    --bg-resume: none;
     --border: #fff;
     --outline: none;
     --box-shadow: rgba(0, 238, 255, 0.2);
+    --footer-hover: #1a202c;
 }
 
 * {
@@ -796,7 +800,7 @@ span {
     background-color: var(--txt-color);
     border-radius: 4px;
     font-size: 4rem;
-    color: #fff;
+    color: var(--footer-hover);
     transform: translateY(-3px);
 }
 
@@ -1007,4 +1011,9 @@ span {
     color: #fff;
     border-color: var(--border);
     text-shadow: 1px 1px 1px var(--outline);
+}
+
+.resume .btn:hover {
+    background: var(--bg-resume-hover);
+    color: var(--txt-color-hover);
 }
