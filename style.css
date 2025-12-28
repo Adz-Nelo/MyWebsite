@@ -10,7 +10,7 @@
     --main-color: #ff9a00;
     --img-shadow: #2d3748;
     --selection: #fff;
-    --header: #2489bb;
+    --header: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     --header-hover: #fff;
     --linear-effect: #ff9a00;
     --linear-effect2: #ffd700;
@@ -25,19 +25,19 @@
     --shadow2-hover: rgba(255, 255, 255, 0.4);
     --shadow3-hover: rgba(255, 204, 0, 0.7);
     --bg-resume: rgb(255, 166, 0);
-    --bg-resume-hover: rgb(255, 166, 0);
+    --bg-resume-hover: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
     --bg-fb: #316FF6;
     --bg-ig: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     --bg-gh: #2d3748;
-    --web-dev-icon: #e34f26;
-    --photoshop-icon: #0099ff;
-    --game-dev-icon: #8a2be2;
-    --web-dev-icon-hover: #e34f26;
-    --photoshop-icon-hover: #0099ff;
+    --web-dev-icon: #f97316;
+    --web-dev-icon-hover: #f97316;
+    --photoshop-icon: #31a8ff;
+    --photoshop-icon-hover: #31a8ff;
+    --game-dev-icon: #a855f7;
     --btn-hover: none;
     --border: none;
-    --outline: #272e3a;
-    --box-shadow: #2d374856;
+    --outline: rgba(30, 41, 59, 0.15);
+    --box-shadow: rgba(30, 41, 59, 0.12);
     --footer-hover: #fff;
 }
 
@@ -682,7 +682,6 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
 }
 
 .tech-item img {
