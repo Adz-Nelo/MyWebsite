@@ -49,7 +49,7 @@ ScrollReveal().reveal('.home-content p, .about-content h3, .home-content h2, .ab
 
 // typed js
 const typed = new Typed('.multiple-txt', {
-  strings: ['Frontend Developer','Game Developer','Web Developer','Photoshop Editor','Web Designer','Video Editor', 'Freelancer', 'Software Engineer'],
+  strings: ['Frontend Developer','Game Developer','Web Developer','Photoshop Editor','Web Designer', 'Graphic Designer','Video Editor', 'Freelancer', 'Software Engineer'],
   typeSpeed: 50,
   backSpeed: 50,
   backDelay: 1500,
