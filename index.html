@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta author="Adriel" content="portfolio" />
+    <meta name="author" content="Adriel" />
     <title>Adz Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="icon" href="img/MyLogo.webp" type="icon/webp" />
+    <link rel="icon" href="img/MyLogo.webp" type="image/webp" />
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -46,21 +55,23 @@
         </p>
 
         <div class="social-media">
-          <a href="https://www.facebook.com/ady.bigcas" target="_blank" id="fb"
+          <a href="https://www.facebook.com/ady.bigcas" target="_blank" rel="noopener noreferrer" id="fb"
             ><i class="bx bxl-facebook"></i
           ></a>
           <a
             href="https://www.instagram.com/nelodec125/"
             target="_blank"
+            rel="noopener noreferrer"
             id="ig"
             ><i class="bx bxl-instagram"></i
           ></a>
-          <a href="https://github.com/Adz-Nelo" target="_blank" id="gh"
+          <a href="https://github.com/Adz-Nelo" target="_blank" rel="noopener noreferrer" id="gh"
             ><i class="bx bxl-github"></i
           ></a>
           <a
             href="https://www.tiktok.com/@nelo.code?lang=en"
             target="_blank"
+            rel="noopener noreferrer"
             id="tk"
             ><i class="bx bxl-tiktok"></i
           ></a>
@@ -95,6 +106,7 @@
             src="img/BIGCAS-ADRIEL_(9).webp"
             alt="Developer"
             title="Adriel Bigcas"
+            loading="lazy"
             onerror="this.src='img/sign-error.svg'"
           />
         </figure>
@@ -166,6 +178,7 @@
             <img
               src="img/hotel-management-system.webp"
               alt="Hotel Management System"
+              loading="lazy"
               onerror="this.src='img/sign-error.svg'"
             />
           </figure>
@@ -179,6 +192,7 @@
             <a
               href="https://nelo-hotel-management-system.infinityfree.me/index.php"
               target="_blank"
+              rel="noopener noreferrer"
               ><i class="bx bx-link-external"></i
             ></a>
           </div>
@@ -189,6 +203,7 @@
             <img
               src="img/tetris-clone.webp"
               alt="Tetris Battle Clone"
+              loading="lazy"
               onerror="this.src='img/sign-error.svg'"
             />
           </figure>
@@ -199,7 +214,7 @@
               no intention to copyright to the original content all rights
               reserved to the rightful owner
             </p>
-            <a href="https://tetris-clone-nelo-code.vercel.app/" target="_blank"
+            <a href="https://tetris-clone-nelo-code.vercel.app/" target="_blank" rel="noopener noreferrer"
               ><i class="bx bx-link-external"></i
             ></a>
           </div>
@@ -210,6 +225,7 @@
             <img
               src="img/Sunnyland.webp"
               alt="Sunnyland Game"
+              loading="lazy"
               onerror="this.src='img/sign-error.svg'"
             />
           </figure>
@@ -221,7 +237,7 @@
               hope you like the game and the design of it as well as the music
               and sound effects.
             </p>
-            <a href="https://adz-nelo.itch.io/sunnyland"><i class="bx bx-link-external"></i></a>
+            <a href="https://adz-nelo.itch.io/sunnyland" target="_blank" rel="noopener noreferrer"><i class="bx bx-link-external"></i></a>
           </div>
         </div>
 
@@ -229,7 +245,8 @@
           <figure>
             <img
               src="img/princess dragon slayer.webp"
-              alt=""
+              alt="Princess Dragon Slayer"
+              loading="lazy"
               onerror="this.src='img/sign-error.svg'"
             />
           </figure>
@@ -246,7 +263,8 @@
           <figure>
             <img
               src="img/VSCode.jpg"
-              alt=""
+              alt="Visual Studio Code"
+              loading="lazy"
               onerror="this.src='img/sign-error.svg'"
             />
           </figure>
@@ -266,7 +284,8 @@
           <figure>
             <img
               src="img/The GOAT.jpg"
-              alt=""
+              alt="Messi"
+              loading="lazy"
               onerror="this.src='img/sign-error.svg'"
             />
           </figure>
@@ -451,28 +470,11 @@
       </div>
     </footer>
 
+    <div id="toast" class="toast"></div>
+
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!--typed js-->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "MegHCkMWcbWhjN5Xv",
-        });
-      })();
-    </script>
   </body>
 </html>
