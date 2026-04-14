@@ -11,6 +11,15 @@ menuIcon.onclick = () => {
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
+
+// Close mobile nav when a link is tapped
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
 let header = document.querySelector('header');
 
 // Throttled scroll handler
@@ -33,9 +42,6 @@ window.addEventListener('scroll', () => {
             });
 
             header.classList.toggle('sticky', top > 100);
-
-            menuIcon.classList.remove('bx-x');
-            navbar.classList.remove('active');
 
             scrollTicking = false;
         });

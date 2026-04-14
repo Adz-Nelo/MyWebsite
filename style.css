@@ -858,8 +858,8 @@ span {
 
     .toggle-btn {
         margin: 12px 0 0 8px;
-        width: 13%;
-        /* height: 5vh; */
+        width: 50px;
+        height: 26px;
     }
 
     .social-media, .resume {
@@ -887,9 +887,23 @@ span {
 
 /* Tablet Styles */
 @media (max-width: 768px) {
+    /* Section spacing — remove 100vh min-height on mobile to avoid blank space */
+    section {
+        min-height: auto;
+        padding: 8rem 4% 5rem;
+    }
+
+    /* Keep home full-height so it still feels like a landing screen */
     .home {
+        min-height: 100vh;
         flex-direction: column;
         gap: 2rem;
+        text-align: center;
+    }
+
+    .home-content p {
+        margin: 0 0 2rem 0;
+        text-align: center;
     }
 
     .home-content h3 {
@@ -907,17 +921,32 @@ span {
 
     .about {
         flex-direction: column-reverse;
-        gap: 4rem;
+        gap: 3rem;
     }
 
     .about-img img {
         width: 70vw;
     }
 
+    /* Center About text on mobile */
+    .about-content {
+        margin: 0;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        text-align: center;
+    }
+
+    .about-content p {
+        text-align: center;
+        margin: 1.5rem 0 2.5rem;
+    }
+
     .services-container {
         flex-direction: column;
         gap: 3rem;
-        margin: 0 2rem;
+        margin: 0;
     }
 
     .services h2, .portfolio h2 {
@@ -928,24 +957,49 @@ span {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Portfolio overlay always visible on touch devices — hover is inaccessible */
+    .portfolio-box .portfolio-layer {
+        transform: translateY(0);
+        background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(30, 30, 30, 0.9));
+    }
+
+    /* Disable image scale on hover since overlay is now always visible */
+    .portfolio-box img:hover {
+        transform: none;
+    }
+
     .tech-container {
         gap: 1.5rem;
     }
-    
+
     .tech-item img {
         width: 5rem;
     }
-    
+
+    /* Tech captions always visible on touch devices */
     .tech-item figcaption {
+        opacity: 1;
         font-size: 1.2rem;
         margin-top: 0.8rem;
     }
+
+    /* Contact form: stack inputs */
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    /* Footer: stack on tablet/mobile */
+    .footer {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        text-align: center;
+    }
 }
 
-/* Small Tablet */
+/* Small Tablet — portfolio drops to single column below 617px */
 @media (max-width: 617px) {
     .portfolio-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
 
@@ -958,18 +1012,14 @@ span {
     .tech-container {
         gap: 1rem;
     }
-    
+
     .tech-item img {
         width: 4rem;
     }
-    
+
     .tech-item figcaption {
         font-size: 1rem;
         margin-top: 0.6rem;
-    }
-
-    .contact form .input-box input {
-        width: 100%;
     }
 
     .home-content h1 {
@@ -978,6 +1028,11 @@ span {
 
     .home-content h3 {
         font-size: 2.2rem;
+    }
+
+    /* Portfolio: single column on small phones */
+    .portfolio-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -992,17 +1047,8 @@ span {
         width: 90vw;
     }
 
-    .footer {
-        flex-direction: column-reverse;
-        gap: 2rem;
-    }
-
-    .footer p {
-        text-align: center;
-    }
-
     section {
-        padding: 8rem 5% 2rem;
+        padding: 8rem 5% 3rem;
     }
 }
 
